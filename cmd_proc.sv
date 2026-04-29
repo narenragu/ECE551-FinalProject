@@ -110,8 +110,9 @@ end
             end
             SOLVE: begin
                 cmd_md = 0;
+                send_resp = 1;
                 if(sol_cmplt) begin
-                    send_resp = 1;
+                    //send_resp = 1;
                     nxt_state = IDLE;
                 end
             end

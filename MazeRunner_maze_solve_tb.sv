@@ -182,7 +182,7 @@ module MazeRunner_maze_solve_tb();
     RST_n    = 1'b0;
     send_cmd = 1'b0;
     cmd      = 16'h0000;
-    batt     = 12'hD80;   // nominal battery voltage
+    batt     = 12'h7FF;   // nominal battery voltage
     repeat(4) @(posedge clk);
     @(negedge clk);
     RST_n = 1'b1;
@@ -242,18 +242,17 @@ module MazeRunner_maze_solve_tb();
     check("hall_n high (no magnet) after reset", hall_n === 1'b1);
 
     // ------- T1: calibration --------------------------------------------
-    // Command encoding for calibrate: 0x2000 (cmd[15:12] = 4'h2)
-    // cmd_proc interprets this as strt_cal; it responds 0xA5 when done.
+    // Command encoding for calibrate: opcode cmd[15:13] = 3'b000 → 0x0000
+    // cmd_proc interprets this as strt_cal; it responds 0xA5 when cal_done.
     $display("\n--- T1: Gyro / IR calibration ---");
-    send_command(16'h2000, 50_000_000);
+    send_command(16'h0000, 50_000_000);
     wait_calibration(50_000_000);   // second ACK after cal_done
 
     // ------- T2: enter maze-solve mode ----------------------------------
-    // Command encoding for maze_solve: 0x4001 → cmd[15:12]=4'h4 clears
-    // cmd_md; cmd[0] = 1 selects left-wall affinity.
-    // (Adjust the encoding to match your cmd_proc implementation.)
+    // send command to enter maze solve mode with left-wall affinity (cmd[0] = 1)
+    // cmd[15:13] = 3'b100 for maze solve, cmd[0] = 1 for left-wall affinity
     $display("\n--- T2: Enter maze-solve mode (left-wall affinity) ---");
-    send_command(16'h4001, 10_000_000);
+    send_command(16'h6001, 10_000_000);
 
     // ------- T3: autonomous maze navigation ----------------------------
     // The robot is now fully autonomous.  RunnerPhysics models the maze
