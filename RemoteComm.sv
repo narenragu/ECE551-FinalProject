@@ -4,7 +4,7 @@ module RemoteComm(
     input logic [15:0] cmd,
     input logic snd_cmd,
     input logic RX,
-    output logic cmd_snt,
+    output logic cmd_sent,
     output logic [7:0]  resp,
     output logic resp_rdy,
     output logic TX
@@ -13,7 +13,7 @@ module RemoteComm(
     logic sel_high;
     logic trmt;
     logic tx_done;
-    logic set_cmd_snt;
+    logic set_cmd_sent;
     logic [7:0] tx_data;
     logic [7:0] low_byte;
 
@@ -63,14 +63,14 @@ module RemoteComm(
             gap_cnt <= '0;
     end
 
-    // cmd_snt SR 
+    // cmd_sent SR 
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n)
-            cmd_snt <= 1'b0;
+            cmd_sent <= 1'b0;
         else if (snd_cmd)
-            cmd_snt <= 1'b0;
-        else if (set_cmd_snt)
-            cmd_snt <= 1'b1;
+            cmd_sent <= 1'b0;
+        else if (set_cmd_sent)
+            cmd_sent <= 1'b1;
     end
 
     // FSM state reg
@@ -85,7 +85,7 @@ module RemoteComm(
         next_state = state;
         sel_high = 1'b1;
         trmt = 1'b0;
-        set_cmd_snt = 1'b0;
+        set_cmd_sent = 1'b0;
 
         case (state)
             IDLE: begin
@@ -113,7 +113,7 @@ module RemoteComm(
             WAIT_LOW_DONE: begin
                 sel_high = 1'b0;
                 if (tx_done) begin
-                    set_cmd_snt = 1'b1;
+                    set_cmd_sent = 1'b1;
                     next_state = IDLE;
                 end
             end

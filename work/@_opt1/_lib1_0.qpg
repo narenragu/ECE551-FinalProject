@@ -1,0 +1,520 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+!s11f vlog 2024.3_2 2024.11, Nov 25 2024
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/filespace/n/naraghuraman/ECE551/Ex18
+T_opt
+!s110 1777431939
+V^VS1;DgLKO<XJA@2UEz9@1
+04 13 4 work inert_intf_tb fast 0
+=1-000ae431a4f1-69f17582-aadcd-1ddfe4
+R0
+Z2 !s12f OEM100
+Z3 !s12b OEM100
+Z4 !s124 OEM100
+Z5 !s135 nogc
+Z6 o-quiet -auto_acc_if_foreign -work work +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OE;O;2024.3_2;79
+R1
+T_opt1
+!s110 1777440113
+V1<JjW3hP`eE`Jn4zT0CgY1
+04 11 4 work cmd_proc_tb fast 0
+=1-000ae431a4f1-69f19571-26f94-212216
+R0
+R2
+R3
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+vA2D_intf
+2/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1777431914
+!i10b 1
+!s100 T@263hVWMV:GcGdQVI7cY2
+ISgSTonGf`M?FREf6F^APR2
+S1
+Z11 d/filespace/n/naraghuraman/ECE551/FinalProject
+w1777414641
+8/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
+!i122 30
+L0 2 85
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OE;L;2024.3_2;79
+r1
+!s85 0
+31
+!i113 0
+Z14 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+n@a2@d_intf
+vADC128S_FC
+2/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
+R9
+R10
+!i10b 1
+!s100 mUTc?3JOXUSQ:H2HiJAH^1
+Ig]Q0VM>E@YOHGY2[RjOlX3
+S1
+R11
+w1777414647
+8/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
+!i122 31
+L0 2 111
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@a@d@c128@s_@f@c
+vcmd_proc
+2/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
+R9
+R10
+!i10b 1
+!s100 E95m^QVDL3KPY0S3i0zI51
+IaYS19S@5E>DEd?UX4ozg[3
+S1
+R11
+Z15 w1777420036
+8/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
+!i122 32
+L0 1 121
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vcmd_proc_tb
+2/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
+R9
+Z16 !s110 1777431915
+!i10b 1
+!s100 0Fkh8KC60R<e76XnQ4;Ac0
+ID0OGXb6F93:37_Z52:<:<0
+S1
+R11
+R15
+8/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
+!i122 33
+L0 1 254
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vDutyScaleROM
+2/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
+R9
+R16
+!i10b 1
+!s100 _F^3z21fB3;lTe1;YOeT10
+Ia6;nUaUl9A[CM]OVUZD^e3
+S1
+R11
+w1777414650
+8/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
+!i122 34
+L0 2 81
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@duty@scale@r@o@m
+vinert_intf
+2/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
+R9
+R16
+!i10b 1
+!s100 b<gSbOB`H^]33Kdj`dVb=0
+IScdde1]75CM3YUUfBCh??0
+S1
+R11
+R15
+8/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
+!i122 35
+L0 1 149
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vinert_intf_tb
+2/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
+R9
+R16
+!i10b 1
+!s100 Z24BjGSbZEc4?JD0kGzbB3
+Id`ikEi=_J`aQ2UbcIoG[T0
+S1
+R11
+R15
+8/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
+!i122 36
+L0 1 101
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vinertial_integrator
+2/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
+R9
+R16
+!i10b 1
+!s100 GXmS<]HcFXbhL6ZY@TCjn2
+I4GLhZ[:SZZ;31:UT:cYWZ0
+S1
+R11
+w1777414810
+8/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
+!i122 37
+L0 2 216
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vinverse_PWM12e
+Z17 2/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
+R9
+Z18 !s110 1777431918
+!i10b 1
+!s100 L6D;VIN?X[PX9kGa]9bX<3
+ISfP<jmNJ_[X_NBJB9SOU@0
+S1
+R11
+Z19 w1777414664
+Z20 8/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
+Z21 F/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
+!i122 51
+L0 365 49
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+ninverse_@p@w@m12e
+vIR_math
+2/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
+R9
+Z22 !s110 1777431916
+!i10b 1
+!s100 5:ioc1@09U@2BRD?62@An1
+IJ983ITPSNGAcddUG:lB_[0
+S1
+R11
+w1777416081
+8/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
+!i122 38
+L0 1 49
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@i@r_math
+vmaze_solve
+2/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
+R9
+Z23 !s110 1777439311
+!i10b 1
+!s100 ^KDhC5`_VO3mIFG=MHRRb0
+I^TC_M[j7`L<Rgl6iZHR6f0
+S1
+R11
+Z24 w1777438895
+8/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
+!i122 61
+L0 1 172
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vMazeRunner
+2/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
+R9
+R22
+!i10b 1
+!s100 J`XTDoAg>jiD8X9?]m4BC3
+IVH1cUHT`QoJ_EX]@H?8Rk0
+S1
+R11
+w1777414658
+8/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
+!i122 40
+L0 2 166
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@maze@runner
+vMazeRunner_tb
+2/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
+R9
+R22
+!i10b 1
+!s100 <0lS4lD`2OOJ0j77XSSc`3
+IJ:Z^zNL^:]No2fz8AfBz_3
+S1
+R11
+w1777414656
+8/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
+!i122 41
+L0 2 66
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@maze@runner_tb
+vMtrDrv
+2/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+R9
+R23
+!i10b 1
+!s100 JTSi=HBH2`03<K><M=T1N1
+ITD:fPm4kH:8E:CSMKCJ8i0
+S1
+R11
+R24
+8/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+!i122 62
+L0 1 65
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@mtr@drv
+vMtrDrv_tb
+2/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
+R9
+Z25 !s110 1777431917
+!i10b 1
+!s100 8MNTFaNeV3M1gK5dXkA`e0
+I3NoGhYWCFnbfC@nEddY=Z1
+S1
+R11
+w1777420163
+8/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
+!i122 43
+L0 1 122
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@mtr@drv_tb
+vnavigate
+2/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
+R9
+R25
+!i10b 1
+!s100 JB>@S5_EBGe2A7^oP8KK01
+I>n_LIiE8hQdGkMC37RVoc1
+S1
+R11
+w1777415632
+8/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
+!i122 44
+L0 1 156
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vPID
+2/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
+R9
+R25
+!i10b 1
+!s100 d3?W>XhT8f@EBELcB>bUR0
+IW::gL6@n>^d6LKd4G;ge93
+S1
+R11
+w1777415975
+8/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
+!i122 45
+L0 1 111
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@p@i@d
+vpiezo_drv
+2/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
+R9
+R25
+!i10b 1
+!s100 XdO23^nA2bEbae>f1@5OJ3
+IEHZIoVPo[g@<5icS`Z^PJ3
+S1
+R11
+w1777415222
+8/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
+!i122 46
+L0 1 211
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vpiezo_drv_tb
+2/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
+R9
+R25
+!i10b 1
+!s100 hSn2A4n6a8Yam7TLAY9]]0
+IRh0=DJ:AX[oOWkOeTnZ@_3
+S1
+R11
+w1777430755
+8/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
+!i122 47
+L0 1 52
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+vPWM8
+2/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
+R9
+R25
+!i10b 1
+!s100 YcOIcGlzRL:O<9Tj]QdD13
+I:LbjcE6Iz;O>am=c`Wl]I3
+S1
+R11
+w1777414661
+8/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
+!i122 48
+L0 2 36
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@p@w@m8
+vRemoteComm
+2/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
+R9
+!s110 1777439845
+!i10b 1
+!s100 OgXET5bQj]N2Fl4WBi9lk0
+ISaU1SD?:fb`N8PCof0E4S2
+S1
+R11
+w1777439839
+8/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
+F/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
+!i122 67
+Z26 L0 1 125
+R12
+R13
+r1
+!s85 0
+31
+!i113 0
+R14
+R7
+n@remote@comm
+vreset_synch
+2/filespace/n/naraghuraman/ECE551/FinalPr
