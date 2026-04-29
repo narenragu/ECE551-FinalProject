@@ -126,7 +126,7 @@ module MazeRunner(
   ////////////////////////////////////////////////////////////////////////////
   // Instantiate IR_Math which adjust desired heading based on IR readings //
   //////////////////////////////////////////////////////////////////////////
-  IR_math #(NOM_IR) iIR_adj(.clk(clk),.lft_opn(lft_opn),.rght_opn(rght_opn),.lft_IR(lft_IR),.rght_IR(rght_IR),
+  IR_math #(NOM_IR) iIR_adj(.lft_opn(lft_opn),.rght_opn(rght_opn),.lft_IR(lft_IR),.rght_IR(rght_IR),
                             .IR_Dtrm(IR_Dtrm),.en_fusion(en_fusion),.dsrd_hdng(dsrd_hdng),
 				            .dsrd_hdng_adj(dsrd_hdng_adj));
     

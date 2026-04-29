@@ -1,0 +1,77 @@
+# Compile of MazeRunner_maze_solve_tb.sv was successful.
+# Compile of navigate_tb_starter.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of inert_intf_tb.sv was successful.
+# Compile of piezo_drv_tb.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_main.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of maze_solve_tb.sv was successful.
+# Compile of maze_solve.sv was successful.
+# Compile of MtrDrv.sv was successful.
+# Compile of A2D_intf.sv was successful.
+# Compile of ADC128S_FC.sv was successful.
+# Compile of cmd_proc.sv was successful.
+# Compile of cmd_proc_tb.sv was successful.
+# Compile of DutyScaleROM.sv was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of IR_Math.sv was successful with warnings.
+# Compile of MazeRunner.sv was successful.
+# Compile of MazeRunner_tb.sv was successful.
+# Compile of MtrDrv_tb.sv was successful.
+# Compile of PID.sv was successful.
+# Compile of piezo_drv.sv was successful with warnings.
+# Compile of PWM8.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of RunnerPhysics.sv was successful with warnings.
+# Compile of sensor_intf.sv was successful with warnings.
+# Compile of SPI_ADC128S.sv was successful.
+# Compile of SPI_iNEMO4.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 34 compiles, 0 failed with no errors.
+vsim -gui work.MazeRunner_maze_solve_tb
+# vsim -gui work.MazeRunner_maze_solve_tb 
+# Start time: 01:45:42 on Apr 29,2026
+# Loading sv_std.std
+# Loading work.MazeRunner_maze_solve_tb
+# Loading work.MazeRunner
+# Loading work.reset_synch
+# Loading work.UART_wrapper
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rx
+# Loading work.cmd_proc
+# Loading work.maze_solve
+# Loading work.navigate
+# Loading work.inert_intf
+# Loading work.SPI_main
+# Loading work.inertial_integrator
+# Loading work.IR_math
+# Loading work.PID
+# Loading work.MtrDrv
+# Loading work.DutyScaleROM
+# ** Error: (vsim-3033) Instantiation of 'PWM12' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MazeRunner_maze_solve_tb/iDUT/iMTR File: C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv.sv Line: 48
+#         Searched libraries:
+#             C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/work
+# ** Error: (vsim-3033) Instantiation of 'PWM12' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /MazeRunner_maze_solve_tb/iDUT/iMTR File: C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv.sv Line: 57
+#         Searched libraries:
+#             C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/work
+# Loading work.sensor_intf
+# Loading work.A2D_intf
+# Loading work.PWM8
+# Loading work.piezo_drv
+# Loading work.RunnerPhysics
+# Loading work.SPI_iNEMO4
+# Loading work.inverse_PWM12e
+# Loading work.ADC128S_FC
+# Loading work.SPI_ADC128S
+# Loading work.RemoteComm
+# Error loading design
+# End time: 01:45:43 on Apr 29,2026, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 5

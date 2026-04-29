@@ -1,3 +1,0 @@
-BEGIN 1:SPI_iNEMO2:fast:work
-    NEMO_setup :  1:inert_intf_tb:fast:work
-END 
