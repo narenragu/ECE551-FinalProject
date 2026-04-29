@@ -45,7 +45,7 @@ module UART_rx (
 
     wire baud_done = (baud_cnt == BAUD_DIV-1);
     wire half_baud_done = (baud_cnt == HALF_BAUD_DIV-1);
-    wire bit_done = (bit_cnt == 4'd9);
+    wire bit_done = (bit_cnt == 4'd8); // CHANGED: was 9 changed to 8
 
     // baud counter
     always_ff @(posedge clk or negedge rst_n) begin
@@ -128,7 +128,7 @@ module UART_rx (
                     inc_bit = 1;
 
                     // shift only during data bits ( 1 – 8 )
-                    if (bit_cnt >= 1 && bit_cnt <= 8)
+                    if (bit_cnt < 8)
                         shift_en = 1;
 
                     if (bit_done) begin
