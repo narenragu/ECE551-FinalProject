@@ -1,0 +1,196 @@
+/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module SPI_iNEMO4
+
+Top level modules:
+	SPI_iNEMO4
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module reset_synch
+
+Top level modules:
+	reset_synch
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module inert_intf_tb
+
+Top level modules:
+	inert_intf_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module SPI_ADC128S
+
+Top level modules:
+	SPI_ADC128S
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module inert_intf
+
+Top level modules:
+	inert_intf
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module IR_math
+** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv(34): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	IR_math
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module DutyScaleROM
+
+Top level modules:
+	DutyScaleROM
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module RunnerPhysics
+** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv(223): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+-- Compiling module inverse_PWM12e
+
+Top level modules:
+	RunnerPhysics
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PID.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module PID
+
+Top level modules:
+	PID
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module inertial_integrator
+
+Top level modules:
+	inertial_integrator
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module piezo_drv_tb
+
+Top level modules:
+	piezo_drv_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module navigate
+
+Top level modules:
+	navigate
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MtrDrv
+** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv(22): (vlog-2697) MSB 24 of part-select into 'lft_prod' is out of bounds.
+** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv(29): (vlog-2697) MSB 24 of part-select into 'rght_prod' is out of bounds.
+
+Top level modules:
+	MtrDrv
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MazeRunner
+
+Top level modules:
+	MazeRunner
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module cmd_proc
+
+Top level modules:
+	cmd_proc
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module A2D_intf
+
+Top level modules:
+	A2D_intf
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module SPI_main
+
+Top level modules:
+	SPI_main
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module RemoteComm
+
+Top level modules:
+	RemoteComm
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module sensor_intf
+** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv(124): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	sensor_intf
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module piezo_drv
+
+Top level modules:
+	piezo_drv
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module PWM8
+
+Top level modules:
+	PWM8
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MtrDrv_tb
+
+Top level modules:
+	MtrDrv_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MazeRunner_tb
+
+Top level modules:
+	MazeRunner_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module cmd_proc_tb
+
+Top level modules:
+	cmd_proc_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module SPI_iNEMO2
+
+Top level modules:
+	SPI_iNEMO2
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module maze_solve
+
+Top level modules:
+	maze_solve
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module ADC128S_FC
+
+Top level modules:
+	ADC128S_FC
+
+} {} {}}

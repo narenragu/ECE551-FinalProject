@@ -103,6 +103,14 @@ module UART_tx (
         end
     end
 
+    //CHANGED
+    always_ff @(posedge clk or negedge rst_n) begin
+    if (!rst_n)
+        tx_done <= 1'b0;
+    else
+        tx_done <= (state == TRANSMIT && baud_tick && bit_cnt == 4'd9);
+    end
+    /*
     always_ff @(posedge clk or negedge rst_n) begin
         if (!rst_n)
             tx_done <= 1'b1;
@@ -112,6 +120,6 @@ module UART_tx (
             else if (state == TRANSMIT && baud_tick && bit_cnt == 4'd9)
                 tx_done <= 1'b1;
         end
-    end
+    end*/
 
 endmodule

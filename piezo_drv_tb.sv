@@ -5,12 +5,12 @@ module piezo_drv_tb();
     logic piezo, piezo_n;
 
     piezo_drv #(.FAST_SIM(1)) iDUT (
-        .clk     (clk     ),
-        .rst_n   (rst_n   ),
+        .clk     (clk),
+        .rst_n   (rst_n),
         .batt_low(batt_low),
-        .fanfare (fanfare ),
-        .piezo   (piezo   ),
-        .piezo_n (piezo_n )
+        .fanfare (fanfare),
+        .piezo   (piezo),
+        .piezo_n (piezo_n)
     );
 
     //clk generation
