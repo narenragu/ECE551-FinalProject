@@ -1,13 +1,13 @@
 m255
 K4
 z2
+!s11f MIXED_VERSIONS
 Z0 !s12c _opt1
 Z1 !s99 nomlopt
 R0
 R1
 !s12c _opt
 R1
-!s11f vlog 2024.3_2 2024.11, Nov 25 2024
 13
 !s112 1.1
 !i10d 8192
@@ -44,824 +44,901 @@ R7
 R8
 n@_opt1
 R9
+R2
 vA2D_intf
-2/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
-Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z11 !s110 1777431914
+Z10 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z11 !s110 1777445030
 !i10b 1
 !s100 T@263hVWMV:GcGdQVI7cY2
-ISgSTonGf`M?FREf6F^APR2
-S1
-Z12 d/filespace/n/naraghuraman/ECE551/FinalProject
-w1777414641
-8/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
-!i122 30
-L0 2 85
+Z12 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IW=6bOn_3mWaVC5d2D34GN3
 Z13 VDg1SIo80bB@j0V0VzS_@n1
-Z14 OE;L;2024.3_2;79
+S1
+Z14 dC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject
+Z15 w1777432385
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/A2D_intf.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/A2D_intf.sv
+!i122 82
+L0 2 85
+Z16 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z15 !s108 1777431914.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv|
-!i113 0
-Z16 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z17 !s108 1777445030.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/A2D_intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/A2D_intf.sv|
+!i113 1
+Z18 o-work work -sv
 R8
 n@a2@d_intf
 vADC128S_FC
-2/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
 R10
 R11
 !i10b 1
 !s100 mUTc?3JOXUSQ:H2HiJAH^1
-Ig]Q0VM>E@YOHGY2[RjOlX3
-S1
 R12
-w1777414647
-8/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
-!i122 31
-L0 2 111
+IVUB;9d]Y^hN=Ud>0nUah?2
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/ADC128S_FC.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/ADC128S_FC.sv
+!i122 83
+L0 2 111
+R16
 r1
 !s85 0
 31
-R15
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv|
-!i113 0
-R16
+R17
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/ADC128S_FC.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/ADC128S_FC.sv|
+!i113 1
+R18
 R8
 n@a@d@c128@s_@f@c
 vcmd_proc
-2/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
 R10
-R11
+Z19 !s110 1777445031
 !i10b 1
 !s100 E95m^QVDL3KPY0S3i0zI51
-IaYS19S@5E>DEd?UX4ozg[3
-S1
 R12
-Z17 w1777420036
-8/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
-!i122 32
-L0 1 121
+I=bCi_GC84_`QVj_6kRQcX1
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc.sv
+!i122 84
+L0 1 121
+R16
 r1
 !s85 0
 31
-R15
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv|
-!i113 0
-R16
+Z20 !s108 1777445031.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc.sv|
+!i113 1
+R18
 R8
 vcmd_proc_tb
-2/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
 R10
-Z18 !s110 1777431915
+R19
 !i10b 1
 !s100 0Fkh8KC60R<e76XnQ4;Ac0
-ID0OGXb6F93:37_Z52:<:<0
-S1
 R12
-R17
-8/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
-!i122 33
-L0 1 254
+I3BLb[X7HJ30P2T5Xe:dFR1
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc_tb.sv
+!i122 85
+L0 1 254
+R16
 r1
 !s85 0
 31
-Z19 !s108 1777431915.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv|
-!i113 0
-R16
+R20
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/cmd_proc_tb.sv|
+!i113 1
+R18
 R8
 vDutyScaleROM
-2/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
 R10
-R18
+Z21 !s110 1777445032
 !i10b 1
 !s100 _F^3z21fB3;lTe1;YOeT10
-Ia6;nUaUl9A[CM]OVUZD^e3
-S1
 R12
-w1777414650
-8/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
-!i122 34
-L0 2 81
+IAMSA`3T7E94GB8FbJZ8Dd3
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/DutyScaleROM.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/DutyScaleROM.sv
+!i122 86
+L0 2 81
+R16
 r1
 !s85 0
 31
-R19
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv|
-!i113 0
-R16
+Z22 !s108 1777445032.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/DutyScaleROM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/DutyScaleROM.sv|
+!i113 1
+R18
 R8
 n@duty@scale@r@o@m
 vinert_intf
-2/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
 R10
-R18
+R21
 !i10b 1
 !s100 b<gSbOB`H^]33Kdj`dVb=0
-IScdde1]75CM3YUUfBCh??0
-S1
 R12
-R17
-8/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv
-!i122 35
-L0 1 149
+If4l9mAN22@OCX;VgVjHJM2
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf.sv
+!i122 87
+L0 1 149
+R16
 r1
 !s85 0
 31
-R19
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf.sv|
-!i113 0
-R16
+R22
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf.sv|
+!i113 1
+R18
 R8
 vinert_intf_tb
-2/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
 R10
-R18
+Z23 !s110 1777445025
 !i10b 1
 !s100 Z24BjGSbZEc4?JD0kGzbB3
-Id`ikEi=_J`aQ2UbcIoG[T0
-S1
 R12
-R17
-8/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv
-!i122 36
-L0 1 101
+IGzi^XMKA[UdOIdcj?oPIW1
 R13
+S1
 R14
+Z24 w1777440428
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf_tb.sv
+!i122 72
+L0 1 101
+R16
 r1
 !s85 0
 31
-R19
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/inert_intf_tb.sv|
-!i113 0
-R16
+Z25 !s108 1777445024.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inert_intf_tb.sv|
+!i113 1
+R18
 R8
 vinertial_integrator
-2/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
 R10
-R18
+Z26 !s110 1777445033
 !i10b 1
 !s100 GXmS<]HcFXbhL6ZY@TCjn2
-I4GLhZ[:SZZ;31:UT:cYWZ0
-S1
 R12
-w1777414810
-8/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
-!i122 37
-L0 2 216
+Ie7<G2Zemmd90?[9UR3UAZ0
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inertial_integrator.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inertial_integrator.sv
+!i122 88
+L0 2 216
+R16
 r1
 !s85 0
 31
-R19
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv|
-!i113 0
-R16
+Z27 !s108 1777445033.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/inertial_integrator.sv|
+!i113 1
+R18
 R8
 vinverse_PWM12e
-Z20 2/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
 R10
-Z21 !s110 1777431918
+Z28 !s110 1777445037
 !i10b 1
 !s100 L6D;VIN?X[PX9kGa]9bX<3
-ISfP<jmNJ_[X_NBJB9SOU@0
-S1
 R12
-Z22 w1777414664
-Z23 8/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
-Z24 F/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
-!i122 51
-L0 365 49
+I=Ak75]_8X5`M6YKf_i[fl2
 R13
+S1
 R14
+R15
+Z29 8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RunnerPhysics.sv
+Z30 FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RunnerPhysics.sv
+!i122 97
+L0 365 49
+R16
 r1
 !s85 0
 31
-Z25 !s108 1777431918.000000
-Z26 !s107 /filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv|
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv|
-!i113 0
-R16
+Z31 !s108 1777445037.000000
+Z32 !s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RunnerPhysics.sv|
+Z33 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RunnerPhysics.sv|
+!i113 1
+R18
 R8
 ninverse_@p@w@m12e
 vIR_math
-2/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
 R10
-Z28 !s110 1777431916
+R26
 !i10b 1
-!s100 5:ioc1@09U@2BRD?62@An1
-IJ983ITPSNGAcddUG:lB_[0
-S1
+!s100 :>Lb722868da7dkB810EV0
 R12
-w1777416081
-8/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
-!i122 38
-L0 1 49
+I3]g6AO_SI[@53YZl=_?iK1
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/IR_Math.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/IR_Math.sv
+!i122 89
+L0 1 49
+R16
 r1
 !s85 0
 31
-R19
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv|
-!i113 0
-R16
+R27
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/IR_Math.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/IR_Math.sv|
+!i113 1
+R18
 R8
 n@i@r_math
 vmaze_solve
-2/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
 R10
-Z29 !s110 1777439311
+Z34 !s110 1777445029
 !i10b 1
 !s100 ^KDhC5`_VO3mIFG=MHRRb0
-I^TC_M[j7`L<Rgl6iZHR6f0
-S1
 R12
-Z30 w1777438895
-8/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
-!i122 61
-L0 1 172
+IJ:TeJciBh2je07=OaJQ]00
 R13
+S1
 R14
+w1777437109
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve.sv
+!i122 80
+L0 1 172
+R16
 r1
 !s85 0
 31
-!s108 1777439310.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv|
-!i113 0
+Z35 !s108 1777445029.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve.sv|
+!i113 1
+R18
+R8
+vmaze_solve_tb
+R10
+Z36 !s110 1777445028
+!i10b 1
+!s100 h4PR4g82T^V<?Xzo89j`]2
+R12
+IW63b74Ifc<z4V`gSEEa4C0
+R13
+S1
+R14
+w1777437250
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve_tb.sv
+!i122 79
+L0 1 491
 R16
+r1
+!s85 0
+31
+Z37 !s108 1777445028.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/maze_solve_tb.sv|
+!i113 1
+R18
 R8
 vMazeRunner
-2/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
 R10
-R28
+Z38 !s110 1777445034
 !i10b 1
 !s100 J`XTDoAg>jiD8X9?]m4BC3
-IVH1cUHT`QoJ_EX]@H?8Rk0
-S1
 R12
-w1777414658
-8/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
-!i122 40
-L0 2 166
+IPhbfLWB?nlMO]zGUG=D6g1
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner.sv
+!i122 90
+L0 2 166
+R16
 r1
 !s85 0
 31
-Z31 !s108 1777431916.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv|
-!i113 0
-R16
+Z39 !s108 1777445034.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner.sv|
+!i113 1
+R18
 R8
 n@maze@runner
-vMazeRunner_tb
-2/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
+vMazeRunner_maze_solve_tb
 R10
-R28
+!s110 1777445023
 !i10b 1
-!s100 <0lS4lD`2OOJ0j77XSSc`3
-IJ:Z^zNL^:]No2fz8AfBz_3
-S1
+!s100 n1Q79d==KiWV8EeJ?;c272
 R12
-w1777414656
-8/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
-!i122 41
-L0 2 66
+ICkIzln@h<XCPWRPCdNN>21
 R13
+S1
 R14
+w1777444925
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_maze_solve_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_maze_solve_tb.sv
+!i122 69
+L0 10 289
+R16
 r1
 !s85 0
 31
-R31
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv|
-!i113 0
+Z40 !s108 1777445023.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_maze_solve_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_maze_solve_tb.sv|
+!i113 1
+R18
+R8
+n@maze@runner_maze_solve_tb
+vMazeRunner_tb
+R10
+R38
+!i10b 1
+!s100 <0lS4lD`2OOJ0j77XSSc`3
+R12
+IIdJhK^V_9][a4j46`S1[`1
+R13
+S1
+R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_tb.sv
+!i122 91
+L0 2 66
 R16
+r1
+!s85 0
+31
+R39
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MazeRunner_tb.sv|
+!i113 1
+R18
 R8
 n@maze@runner_tb
 vMtrDrv
-2/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
 R10
-R29
+R34
 !i10b 1
 !s100 JTSi=HBH2`03<K><M=T1N1
-ITD:fPm4kH:8E:CSMKCJ8i0
-S1
 R12
-R30
-8/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
-!i122 62
-L0 1 65
+I<RhW;fUOjDlZHRQ0RmgBC2
 R13
+S1
 R14
+w1777432734
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv.sv
+!i122 81
+L0 1 65
+R16
 r1
 !s85 0
 31
-Z32 !s108 1777439311.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv|
-!i113 0
-R16
+R35
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv.sv|
+!i113 1
+R18
 R8
 n@mtr@drv
 vMtrDrv_tb
-2/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
 R10
-Z33 !s110 1777431917
+Z41 !s110 1777445035
 !i10b 1
 !s100 8MNTFaNeV3M1gK5dXkA`e0
-I3NoGhYWCFnbfC@nEddY=Z1
-S1
 R12
-w1777420163
-8/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
-!i122 43
-L0 1 122
+I;][`ZPBz[cncY4=eLOT2=2
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv_tb.sv
+!i122 92
+L0 1 122
+R16
+r1
+!s85 0
+31
+Z42 !s108 1777445035.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/MtrDrv_tb.sv|
+!i113 1
+R18
+R8
+n@mtr@drv_tb
+vnavigate
+R10
+Z43 !s110 1777445024
+!i10b 1
+!s100 ml9a_a7ZzLiMA9>iaGUhI2
+R12
+IDD9997EK[nN2Ze0Kbl_`K0
+R13
+S1
+R14
+w1777441401
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate.sv
+!i122 71
+L0 1 140
+R16
+r1
+!s85 0
+31
+R25
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate.sv|
+!i113 1
+R18
+R8
+vnavigate_tb
+R10
+R43
+!i10b 1
+!s100 ?e3NnoIFiG5i4X]QUMG1c2
+R12
+IMNG]J?<IO>jY`?OObjVc?1
+R13
+S1
+R14
+w1777441584
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate_tb_starter.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate_tb_starter.sv
+!i122 70
+L0 1 126
+R16
+r1
+!s85 0
+31
+R40
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate_tb_starter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/navigate_tb_starter.sv|
+!i113 1
+R18
+R8
+vPID
+R10
+R41
+!i10b 1
+!s100 d3?W>XhT8f@EBELcB>bUR0
+R12
+I1mQJP<Q1Azl9M77zS]g;j3
+R13
+S1
+R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PID.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PID.sv
+!i122 93
+L0 1 111
+R16
+r1
+!s85 0
+31
+R42
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PID.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PID.sv|
+!i113 1
+R18
+R8
+n@p@i@d
+vpiezo_drv
+R10
+Z44 !s110 1777445036
+!i10b 1
+!s100 XdO23^nA2bEbae>f1@5OJ3
+R12
+Ij1]9K5XSKGURT4J2zPkVk0
+R13
+S1
+R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv.sv
+!i122 94
+L0 1 211
+R16
+r1
+!s85 0
+31
+Z45 !s108 1777445036.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv.sv|
+!i113 1
+R18
+R8
+vpiezo_drv_tb
+R10
+R23
+!i10b 1
+!s100 hSn2A4n6a8Yam7TLAY9]]0
+R12
+I09W7khj@lal2JzlbSYKcd2
+R13
+S1
+R14
+R24
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv_tb.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv_tb.sv
+!i122 73
+L0 1 52
+R16
+r1
+!s85 0
+31
+!s108 1777445025.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/piezo_drv_tb.sv|
+!i113 1
+R18
+R8
+vPWM8
+R10
+R44
+!i10b 1
+!s100 YcOIcGlzRL:O<9Tj]QdD13
+R12
+In[BaDVbX1hlB=YX1>>oi:1
+R13
+S1
+R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PWM8.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PWM8.sv
+!i122 95
+L0 2 36
+R16
+r1
+!s85 0
+31
+R45
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PWM8.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/PWM8.sv|
+!i113 1
+R18
+R8
+n@p@w@m8
+vRemoteComm
+R10
+R36
+!i10b 1
+!s100 CX_AYa6HV`b5[^JZ?S6R03
+R12
+IM@B2W8?kR]V`nKkZziGkG0
+R13
+S1
+R14
+w1777440325
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RemoteComm.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RemoteComm.sv
+!i122 78
+L0 1 104
+R16
+r1
+!s85 0
+31
+R37
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/RemoteComm.sv|
+!i113 1
+R18
+R8
+n@remote@comm
+vreset_synch
+R10
+R28
+!i10b 1
+!s100 cTb[HU=<`20Z2GRTJR>aZ2
+R12
+I0`8mQZ6P2o85:XZK:AOW]0
+R13
+S1
+R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/reset_synch.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/reset_synch.sv
+!i122 96
+L0 2 18
+R16
 r1
 !s85 0
 31
 R31
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv|
-!i113 0
-R16
-R8
-n@mtr@drv_tb
-vnavigate
-2/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
-R10
-R33
-!i10b 1
-!s100 JB>@S5_EBGe2A7^oP8KK01
-I>n_LIiE8hQdGkMC37RVoc1
-S1
-R12
-w1777415632
-8/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
-!i122 44
-L0 1 156
-R13
-R14
-r1
-!s85 0
-31
-Z34 !s108 1777431917.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv|
-!i113 0
-R16
-R8
-vPID
-2/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
-R10
-R33
-!i10b 1
-!s100 d3?W>XhT8f@EBELcB>bUR0
-IW::gL6@n>^d6LKd4G;ge93
-S1
-R12
-w1777415975
-8/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
-!i122 45
-L0 1 111
-R13
-R14
-r1
-!s85 0
-31
-R34
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/PID.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/PID.sv|
-!i113 0
-R16
-R8
-n@p@i@d
-vpiezo_drv
-2/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
-R10
-R33
-!i10b 1
-!s100 XdO23^nA2bEbae>f1@5OJ3
-IEHZIoVPo[g@<5icS`Z^PJ3
-S1
-R12
-w1777415222
-8/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
-!i122 46
-L0 1 211
-R13
-R14
-r1
-!s85 0
-31
-R34
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv|
-!i113 0
-R16
-R8
-vpiezo_drv_tb
-2/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
-R10
-R33
-!i10b 1
-!s100 hSn2A4n6a8Yam7TLAY9]]0
-IRh0=DJ:AX[oOWkOeTnZ@_3
-S1
-R12
-w1777430755
-8/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
-!i122 47
-L0 1 52
-R13
-R14
-r1
-!s85 0
-31
-R34
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv|
-!i113 0
-R16
-R8
-vPWM8
-2/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
-R10
-R33
-!i10b 1
-!s100 YcOIcGlzRL:O<9Tj]QdD13
-I:LbjcE6Iz;O>am=c`Wl]I3
-S1
-R12
-w1777414661
-8/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
-!i122 48
-L0 2 36
-R13
-R14
-r1
-!s85 0
-31
-R34
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv|
-!i113 0
-R16
-R8
-n@p@w@m8
-vRemoteComm
-2/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
-R10
-!s110 1777440510
-!i10b 1
-!s100 CX_AYa6HV`b5[^JZ?S6R03
-If8;5QR;@nl2V7fDW1oj;11
-S1
-R12
-w1777440477
-8/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
-!i122 68
-L0 1 104
-R13
-R14
-r1
-!s85 0
-31
-!s108 1777440509.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv|
-!i113 0
-R16
-R8
-n@remote@comm
-vreset_synch
-2/filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv
-R10
-R21
-!i10b 1
-!s100 cTb[HU=<`20Z2GRTJR>aZ2
-IBQ;;i;dnbl;PFZFizSzln1
-S1
-R12
-w1777415235
-8/filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv
-!i122 50
-L0 2 18
-R13
-R14
-r1
-!s85 0
-31
-R25
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/reset_synch.sv|
-!i113 0
-R16
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/reset_synch.sv|
+!i113 1
+R18
 R8
 vRunnerPhysics
-R20
 R10
-R21
+R28
 !i10b 1
 !s100 o=e<I:0W6]cm5V:F4Inl91
-Ijk;T?Z<cogFK<fRo2eUco1
-S1
 R12
-R22
-R23
-R24
-!i122 51
-L0 2 359
+I7dURfEUn3_aZK?CGXmi8e0
 R13
+S1
 R14
+R15
+R29
+R30
+!i122 97
+L0 2 359
+R16
 r1
 !s85 0
 31
-R25
-R26
-R27
-!i113 0
-R16
+R31
+R32
+R33
+!i113 1
+R18
 R8
 n@runner@physics
 vsensor_intf
-2/filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv
 R10
-R21
+Z46 !s110 1777445038
 !i10b 1
 !s100 3fA>ci8ebbYKbj6__Pob31
-ITLncALBQiM>2bJS]^5B4F1
-S1
 R12
-w1777414667
-8/filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv
-!i122 52
-L0 2 370
+IbLWb_mhomVlaQ=f2HiGUO1
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/sensor_intf.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/sensor_intf.sv
+!i122 98
+L0 2 370
+R16
 r1
 !s85 0
 31
-R25
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv|
-!i113 0
-R16
+Z47 !s108 1777445038.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/sensor_intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/sensor_intf.sv|
+!i113 1
+R18
 R8
 vSPI_ADC128S
-2/filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv
 R10
-Z35 !s110 1777431919
+R46
 !i10b 1
 !s100 ?iCNUiE=NBENmhoI9<FhL3
-I_?;EM58R^NdaJ;h[nmLFQ2
-S1
 R12
-w1777414670
-8/filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv
-!i122 53
-L0 2 140
+I5^U`]Ikm4HIm[_1CTBG672
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_ADC128S.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_ADC128S.sv
+!i122 99
+L0 2 140
+R16
 r1
 !s85 0
 31
-R25
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/SPI_ADC128S.sv|
-!i113 0
-R16
+R47
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_ADC128S.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_ADC128S.sv|
+!i113 1
+R18
 R8
 n@s@p@i_@a@d@c128@s
 vSPI_iNEMO2
-2/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv
 R10
-R35
+Z48 !s110 1777445026
 !i10b 1
 !s100 K1UHb]MW6oV^nLSY1EWFc0
-IcaIRhnSMlZMNKBUb[HEH80
-S1
 R12
-w1777431867
-8/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv
-!i122 54
-L0 1 218
+IVPS[KOd1f?<jWgEiID]a?0
 R13
+S1
 R14
+R24
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO2.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO2.sv
+!i122 74
+L0 1 218
+R16
 r1
 !s85 0
 31
-Z36 !s108 1777431919.000000
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv|
-!i113 0
-R16
+Z49 !s108 1777445026.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO2.sv|
+!i113 1
+R18
 R8
 n@s@p@i_i@n@e@m@o2
 vSPI_iNEMO4
-2/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv
 R10
-R35
+Z50 !s110 1777445039
 !i10b 1
 !s100 409JaCR3VJI_lAD[EXgKM1
-I_XYTIHzJCkM8cO1l^6>Hh1
-S1
 R12
-w1777414806
-8/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv
-!i122 55
-L0 2 196
+IO;``i73OB090[MRk`bBKR1
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO4.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO4.sv
+!i122 100
+L0 2 196
+R16
 r1
 !s85 0
 31
-R36
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO4.sv|
-!i113 0
-R16
+Z51 !s108 1777445039.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO4.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_iNEMO4.sv|
+!i113 1
+R18
 R8
 n@s@p@i_i@n@e@m@o4
 vSPI_main
-2/filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv
 R10
-R35
+R48
 !i10b 1
 !s100 2Mj]7Xg`][1K;DAXJdMDS0
-I9b^Q?CUT:li?aPVQT>o=B2
-S1
 R12
-w1777431862
-8/filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv
-!i122 56
-L0 1 189
+IanUcbV_AkLLzYBU4lB;W20
 R13
+S1
 R14
+R24
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_main.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_main.sv
+!i122 75
+L0 1 189
+R16
 r1
 !s85 0
 31
-R36
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv|
-!i113 0
-R16
+R49
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_main.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/SPI_main.sv|
+!i113 1
+R18
 R8
 n@s@p@i_main
 vUART
-2/filespace/n/naraghuraman/ECE551/FinalProject/UART.sv
 R10
-R29
+R50
 !i10b 1
 !s100 1c7jdaCh948Z2HJGWz_II2
-IY7:jC8EYP_jDF7ZfPf:0Y2
-S1
 R12
-Z37 w1777438819
-8/filespace/n/naraghuraman/ECE551/FinalProject/UART.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/UART.sv
-!i122 63
-L0 1 24
+I4n309g@`nAAjUNQ`n<SR50
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART.sv
+!i122 101
+L0 1 24
+R16
 r1
 !s85 0
 31
-R32
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/UART.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/UART.sv|
-!i113 0
-R16
+R51
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART.sv|
+!i113 1
+R18
 R8
 n@u@a@r@t
 vUART_rx
-2/filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv
 R10
-R29
+Z52 !s110 1777445027
 !i10b 1
 !s100 3DC<^_Za0oC?>=E7aiOR[0
-ICDSWCT4Hzn78>a`7:bQfk1
-S1
 R12
-R37
-8/filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv
-!i122 64
-L0 1 164
+I[aDaWihb?c7_;jjfMWXnF2
 R13
+S1
 R14
+R24
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_rx.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_rx.sv
+!i122 76
+L0 1 164
+R16
 r1
 !s85 0
 31
-R32
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv|
-!i113 0
-R16
+Z53 !s108 1777445027.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_rx.sv|
+!i113 1
+R18
 R8
 n@u@a@r@t_rx
 vUART_tx
-2/filespace/n/naraghuraman/ECE551/FinalProject/UART_tx.sv
 R10
-R29
+R52
 !i10b 1
 !s100 Wez9d?nBkaVaGbbg3:c020
-IHPE;4c][@^0`k`]n47c8F2
-S1
 R12
-R37
-8/filespace/n/naraghuraman/ECE551/FinalProject/UART_tx.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/UART_tx.sv
-!i122 65
-L0 1 125
+IHC;YeoAIlX^mz>N9hA`Y@1
 R13
+S1
 R14
+R24
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_tx.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_tx.sv
+!i122 77
+L0 1 125
+R16
 r1
 !s85 0
 31
-R32
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/UART_tx.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/UART_tx.sv|
-!i113 0
-R16
+R53
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_tx.sv|
+!i113 1
+R18
 R8
 n@u@a@r@t_tx
 vUART_wrapper
-2/filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv
 R10
-!s110 1777439312
+!s110 1777445040
 !i10b 1
 !s100 8kok=Lc`P9e>zGb^6]Z3J1
-Im=FQSijQ5E5P_OU2c8`>o0
-S1
 R12
-R37
-8/filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv
-F/filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv
-!i122 66
-L0 1 97
+I]P^7SzK=LYOfdg?9D2fbg3
 R13
+S1
 R14
+R15
+8C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_wrapper.sv
+FC:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_wrapper.sv
+!i122 102
+L0 1 97
+R16
 r1
 !s85 0
 31
-R32
-!s107 /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv|
-!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv|
-!i113 0
-R16
+!s108 1777445040.000000
+!s107 C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/maxda/Downloads/ECE551/ECE551-FinalProject/UART_wrapper.sv|
+!i113 1
+R18
 R8
 n@u@a@r@t_wrapper
