@@ -79,9 +79,8 @@ module A2D_intf(clk,rst_n,strt_cnv,cnv_cmplt,chnnl,res,SS_n,SCLK,MOSI,MISO);
   // Instantiate SPI main for A2D interface //
   /////////////////////////////////////////////
   SPI_main iSPI(.clk(clk),.rst_n(rst_n),.SS_n(SS_n),.SCLK(SCLK),.MISO(MISO),.MOSI(MOSI),.wrt(wrt),
-                  .done(done),.rspns(rspns),.cmd(cmd));
+                  .done(done),.rd_data(rspns),.wrt_data(cmd));
   
   assign res = rspns[11:0];		// Give 1's complement as reading (invert for light line on dark background)
   
 endmodule
-  
