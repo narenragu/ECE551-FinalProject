@@ -2,7 +2,7 @@ module cmd_proc_tb();
 
 reg clk, rst_n;
 reg [15:0] cmd;
-reg snd_cmd;
+reg send_cmd;
 
 wire resp_rdy;
 wire [7:0] resp;
@@ -27,7 +27,7 @@ RemoteComm iREMOTE(
     .clk(clk),
     .rst_n(rst_n),
     .cmd(cmd),
-    .snd_cmd(snd_cmd),
+    .send_cmd(send_cmd),
     .RX(RX_TX),
     .resp(resp),
     .cmd_sent(cmd_sent),
@@ -73,9 +73,9 @@ task send_command;
     begin
         @(negedge clk);
         cmd = command;
-        snd_cmd = 1'b1;
+        send_cmd = 1'b1;
         @(negedge clk);
-        snd_cmd = 1'b0;
+        send_cmd = 1'b0;
     end
 endtask
 
@@ -164,7 +164,7 @@ end
 initial begin
     // Sequence 1
     rst_n      = 0;
-    snd_cmd    = 0;
+    send_cmd    = 0;
     cmd        = 16'h0000;
 
     repeat(2) @(negedge clk);

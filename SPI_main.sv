@@ -3,9 +3,9 @@ module SPI_main(
     output logic SS_n, SCLK, MOSI,    //SPI protocol signals
     input MISO,                 
     input wrt,                  //SPI transaction indicated by wrt going high for one clk cycle
-    input [15:0] wrt_data,      //data sent to SPI slave
+    input [15:0] cmd,      //data sent to SPI slave
     output logic done,                //asserted when SPI transaction complete; stay asserted until next wrt
-    output logic [15:0] rd_data       //Data from SPI secondary (only use 7:0 for intertial sensor)
+    output logic [15:0] rspns       //Data from SPI secondary (only use 7:0 for intertial sensor)
 );
     //sclk internal signals
     logic [4:0] sclk_div;
@@ -37,6 +37,7 @@ module SPI_main(
             sclk_div <= sclk_div + 1;
         end
     end
+    
     //control signals from sclk
     assign SCLK = sclk_div[4];
     //SCLK rising next clk
@@ -58,7 +59,7 @@ module SPI_main(
     //16-bit shift register for both MISO and MOSI
     //sample MISO when smpl asserted
     //shift smpled bit into LSB when shft asserted
-    //shift reg loaded with wrt_data when transaction initiated
+    //shift reg loaded with cmd when transaction initiated
     //MISO control
     always_ff @(posedge clk, negedge rst_n) begin
         if(!rst_n) begin
@@ -75,7 +76,7 @@ module SPI_main(
         if(!rst_n) begin
             shft_reg <= 16'b0;
         end else if(shft_cntrl[1] == 1'b1) begin
-            shft_reg <= wrt_data;
+            shft_reg <= cmd;
         end else if(shft_cntrl == 2'b01) begin
             shft_reg <= {shft_reg[14:0], MISO_smpl};
         end else if(shft_cntrl == 2'b00) begin
@@ -128,14 +129,14 @@ module SPI_main(
         end
     end
 
-    //rd_data control
+    //rspns control
     always_ff @(posedge clk, negedge rst_n) begin
         if(!rst_n) begin
-            rd_data <= 16'b0;
+            rspns <= 16'b0;
         end else if(set_done_ff) begin
-            rd_data <= shft_reg; //load the received data into rd_data when transaction done
+            rspns <= shft_reg; //load the received data into rspns when transaction done
         end else begin
-            rd_data <= rd_data; //hold the value of rd_data until next transaction
+            rspns <= rspns; //hold the value of rspns until next transaction
         end
     end
 

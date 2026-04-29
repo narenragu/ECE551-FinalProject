@@ -1,4 +1,3 @@
-// PROVIDED
 module MazeRunner_tb();
   
   reg clk,RST_n;
@@ -22,7 +21,6 @@ module MazeRunner_tb();
   wire piezo;
 
   ///// Internal registers for testing purposes??? /////////
-
   
   //////////////////////
   // Instantiate DUT //
@@ -51,14 +49,112 @@ module MazeRunner_tb();
 					 .A2D_SS_n(A2D_SS_n),.A2D_SCLK(A2D_SCLK),.A2D_MOSI(A2D_MOSI),
 					 .A2D_MISO(A2D_MISO),.hall_n(hall_n),.batt(batt));
 
+  task automatic wait_for_ack();
+    fork
+        begin
+            @(posedge resp_rdy);
+            if (resp !== 8'hA5)
+                $fatal(1, "ERROR: expected 0xA5, got 0x%h", resp);
+            $display("ACK received: 0x%h", resp);
+        end
+        begin
+            repeat(1_000_000) @(posedge clk);
+            $fatal(1, "TIMEOUT waiting for ACK");
+        end
+    join_any
+    disable fork;
+  endtask
 
-					 
+  task send_command;
+    input [15:0] command;
+    begin
+        @(negedge clk);
+        cmd = command;
+        send_cmd = 1'b1;
+        @(negedge clk);
+        send_cmd = 1'b0;
+    end
+  endtask
+
+  task send_command_wait_ack;
+    input [15:0] command;
+    begin
+        send_command(command);
+        @(posedge cmd_sent);
+        wait_for_ack();
+    end
+  endtask
+
+  task automatic wait_for_solve();
+    fork
+        begin
+            @(negedge hall_n);
+            $display("Magnet found! Maze solved at time %0t", $time);
+            // wait for ACK after sol_cmplt
+            @(posedge resp_rdy);
+            if (resp !== 8'hA5)
+                $fatal(1, "ERROR: expected 0xA5 after solve, got 0x%h", resp);
+            $display("Solve ACK received: 0x%h", resp);
+        end
+        begin
+            repeat(10_000_000) @(posedge clk);
+            $fatal(1, "TIMEOUT: maze not solved within 10M cycles");
+        end
+    join_any
+    disable fork;
+  endtask
+
+
+  // send some commands to the MazeRunner over bluetooth and observe responses
   initial begin
+    // initialize signals
+    clk = 0;
+    batt = 12'hD80; // nominal battery voltage
+    send_cmd = 0;
+    cmd = 0;
 
-  /// Your magic goes here ///
+    RST_n = 0; // reset the system
+    repeat(5) @(negedge clk);
+    RST_n = 1; 
+    repeat(5) @(negedge clk);
+
+    // send cmd to calibrate
+    $display("CMD: Calibrate");
+    send_command_wait_ack(16'h0000);
+
+    /*
+
+    // send cmd to set heading to north
+    $display("CMD: Set heading north");
+    send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
+
+    // send cmd to move, stop at left opening
+    $display("CMD: Move forward");
+    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+    
+    // send cmd to set heading to west
+    $display("CMD: Set heading west");
+    send_command_wait_ack(16'h23FF); // 3'b001 (heading) + 12'h3FF (west)
+
+    // send cmd to move, stop at left opening
+    $display("CMD: Move forward");
+    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+
+    */
+
+    repeat(200_000) @(negedge clk);
+
+    // send cmd to calibrate
+    $display("CMD: Solve maze: left affinity");
+    send_command(16'h6001); // 3'b011 (solve) + cmd[0] = 1 (left affinity)
+    @(posedge cmd_sent)
+    wait_for_solve();
+
+    $display("Maze solved!");
+
+    repeat(5) @(negedge clk);
 
     $stop();
-	
   end
   
   always

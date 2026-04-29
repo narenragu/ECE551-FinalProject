@@ -34,7 +34,7 @@ module inert_intf(clk,rst_n,strt_cal,cal_done,heading,rdy,IR_Dtrm,
   
   SPI_main iSPI(.clk(clk),.rst_n(rst_n),.SS_n(SS_n),.SCLK(SCLK),
                 .MISO(MISO),.MOSI(MOSI),.wrt(wrt),.done(done),
-                .rd_data(inert_data),.wrt_data(cmd));
+                .rspns(inert_data),.cmd(cmd));
 				  
   inertial_integrator #(.FAST_SIM(FAST_SIM)) iINT(.clk(clk), .rst_n(rst_n), .strt_cal(strt_cal),
                         .vld(vld),.rdy(rdy),.cal_done(cal_done), .yaw_rt(yaw_rt),.moving(moving),

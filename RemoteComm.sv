@@ -1,7 +1,7 @@
 module RemoteComm(
     input clk, rst_n,
     input [15:0] cmd,
-    input snd_cmd,
+    input send_cmd,
     input RX,
     output [7:0] resp,
     output logic cmd_sent,
@@ -45,7 +45,7 @@ end
             cmd_sent <= 1'b0;
         end else if(set_cmd_sent) begin
             cmd_sent <= 1'b1; 
-        end else if(snd_cmd) begin
+        end else if(send_cmd) begin
             cmd_sent <= 1'b0;
         end
     end
@@ -69,7 +69,7 @@ end
 
     case(state)
         IDLE: begin
-            if(snd_cmd) begin
+            if(send_cmd) begin
                 load_high = 1;
                 nxt_state = LOAD1;
             end

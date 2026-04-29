@@ -1,6 +1,7 @@
 module IR_math
 #(parameter NOM_IR = 12'h900)
 (
+    input clk,
     input lft_opn, rght_opn,
     input [11:0] lft_IR, rght_IR,
     input signed [8:0] IR_Dtrm,

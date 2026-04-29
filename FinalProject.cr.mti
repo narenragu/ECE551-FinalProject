@@ -43,7 +43,7 @@ Top level modules:
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 -- Compiling module IR_math
-** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv(34): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv(35): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
 	IR_math
@@ -78,19 +78,12 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	inertial_integrator
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PWM12.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PWM12.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MtrDrv
+-- Compiling module PWM12
 
 Top level modules:
-	MtrDrv
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module piezo_drv_tb
-
-Top level modules:
-	piezo_drv_tb
+	PWM12
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/navigate.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -99,12 +92,12 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	navigate
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MazeRunner
+-- Compiling module A2D_intf
 
 Top level modules:
-	MazeRunner
+	A2D_intf
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -113,12 +106,26 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	cmd_proc
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/A2D_intf.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module A2D_intf
+-- Compiling module MazeRunner
 
 Top level modules:
-	A2D_intf
+	MazeRunner
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module piezo_drv_tb
+
+Top level modules:
+	piezo_drv_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MtrDrv
+
+Top level modules:
+	MtrDrv
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -126,6 +133,20 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 
 Top level modules:
 	SPI_main
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/RemoteComm.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module RemoteComm
+
+Top level modules:
+	RemoteComm
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module piezo_drv
+
+Top level modules:
+	piezo_drv
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/sensor_intf.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -135,47 +156,12 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	sensor_intf
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/piezo_drv.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PWM12_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PWM12_tb.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module piezo_drv
+-- Compiling module PWM12_tb
 
 Top level modules:
-	piezo_drv
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module UART_wrapper
-
-Top level modules:
-	UART_wrapper
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module UART
-
-Top level modules:
-	UART
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module PWM8
-
-Top level modules:
-	PWM8
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MtrDrv_tb
-
-Top level modules:
-	MtrDrv_tb
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MazeRunner_tb
-
-Top level modules:
-	MazeRunner_tb
+	PWM12_tb
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc_tb.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -184,12 +170,40 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	cmd_proc_tb
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv_tb.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module UART_rx
+-- Compiling module MtrDrv_tb
 
 Top level modules:
-	UART_rx
+	MtrDrv_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PWM8.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module PWM8
+
+Top level modules:
+	PWM8
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module UART_wrapper
+
+Top level modules:
+	UART_wrapper
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module maze_solve
+
+Top level modules:
+	maze_solve
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_iNEMO2.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -198,12 +212,12 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	SPI_iNEMO2
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/maze_solve.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART_rx.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module maze_solve
+-- Compiling module UART_rx
 
 Top level modules:
-	maze_solve
+	UART_rx
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/ADC128S_FC.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
