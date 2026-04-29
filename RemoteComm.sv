@@ -1,125 +1,104 @@
 module RemoteComm(
-    input logic clk,
-    input logic rst_n,
-    input logic [15:0] cmd,
-    input logic snd_cmd,
-    input logic RX,
-    output logic cmd_snt,
-    output logic [7:0]  resp,
-    output logic resp_rdy,
-    output logic TX
+    input clk, rst_n,
+    input [15:0] cmd,
+    input snd_cmd,
+    input RX,
+    output [7:0] resp,
+    output logic cmd_sent,
+    output resp_rdy,
+    output TX
 );
+    logic clr_rx_rdy;
+    logic trmt, tx_done;
+    logic [7:0] tx_byte, rx_byte;
+    //logic sel; //0 for first byte, 1 for second byte
+    logic set_cmd_sent;
+    logic load_high, load_low;
+    
+    UART iUART(.clk(clk), .rst_n(rst_n), .RX(RX), .TX(TX), .rx_rdy(resp_rdy), 
+                .clr_rx_rdy(clr_rx_rdy), .rx_data(resp), .trmt(trmt), .tx_data(tx_byte), .tx_done(tx_done));
 
-    logic sel_high;
-    logic trmt;
-    logic tx_done;
-    logic set_cmd_snt;
-    logic [7:0] tx_data;
-    logic [7:0] low_byte;
+    typedef enum logic [2:0] {IDLE, LOAD1, SEND1, LOAD2, SEND2} state_t;
+    state_t state, nxt_state;
 
-    localparam BAUD_DIV = 2604;
-    logic [11:0] gap_cnt;
-    logic gap_done;
-
-    typedef enum logic [1:0] { 
-        IDLE, 
-        WAIT_HIGH_DONE,
-        GAP,
-        WAIT_LOW_DONE 
-    } state_t;
-    state_t state, next_state;
-
-    UART iUART (
-        .clk(clk),
-        .rst_n(rst_n),
-        .RX(RX),
-        .TX(TX),
-        .rx_rdy(resp_rdy),
-        .clr_rx_rdy(1'b0),
-        .rx_data(resp),
-        .trmt(trmt),
-        .tx_data(tx_data),
-        .tx_done(tx_done)
-    );
-
-    assign tx_data = sel_high ? cmd[15:8] : low_byte;
-    assign gap_done = (gap_cnt == BAUD_DIV - 1);
-
-    // low byte reg
+    //clr_rx_rdy control
     always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            low_byte <= 8'h00;
-        else if (snd_cmd)
-            low_byte <= cmd[7:0];
+    if (!rst_n)
+        clr_rx_rdy <= 1'b0;
+    else
+        clr_rx_rdy <= resp_rdy; //clear resp_rdy after one cycle to acknowledge receipt of response
+end
+
+    //tx_byte control
+    always_ff @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        tx_byte <= 8'h00;
+    else if(load_high)
+        tx_byte <= cmd[15:8];
+    else if(load_low)
+        tx_byte <= cmd[7:0];
     end
 
-    // gap counter — runs only in GAP state
-    always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            gap_cnt <= '0;
-        else if (state == GAP)
-            gap_cnt <= gap_cnt + 1;
-        else
-            gap_cnt <= '0;
+    //cmd_sent control
+    always_ff @ (posedge clk, negedge rst_n) begin
+        if(!rst_n) begin
+            cmd_sent <= 1'b0;
+        end else if(set_cmd_sent) begin
+            cmd_sent <= 1'b1; 
+        end else if(snd_cmd) begin
+            cmd_sent <= 1'b0;
+        end
     end
 
-    // cmd_snt SR 
-    always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
-            cmd_snt <= 1'b0;
-        else if (snd_cmd)
-            cmd_snt <= 1'b0;
-        else if (set_cmd_snt)
-            cmd_snt <= 1'b1;
-    end
-
-    // FSM state reg
-    always_ff @(posedge clk or negedge rst_n) begin
-        if (!rst_n)
+    //state transition
+    always_ff @ (posedge clk or negedge rst_n) begin
+        if(!rst_n) begin
             state <= IDLE;
-        else
-            state <= next_state;
+        end else begin
+            state <= nxt_state;
+        end
     end
 
+    //output logic and next state logic
     always_comb begin
-        next_state = state;
-        sel_high = 1'b1;
-        trmt = 1'b0;
-        set_cmd_snt = 1'b0;
+    trmt = 0;
+    set_cmd_sent = 0;
+    load_high = 0;
+    load_low = 0;
+    nxt_state = state;
 
-        case (state)
-            IDLE: begin
-                sel_high = 1'b1;
-                if (snd_cmd) begin
-                    trmt = 1'b1;
-                    next_state = WAIT_HIGH_DONE;
-                end
+    case(state)
+        IDLE: begin
+            if(snd_cmd) begin
+                load_high = 1;
+                nxt_state = LOAD1;
             end
+        end
 
-            WAIT_HIGH_DONE: begin
-                sel_high = 1'b0;
-                if (tx_done)
-                    next_state = GAP;
+        LOAD1: begin
+            trmt = 1;
+            nxt_state = SEND1;
+        end
+
+        SEND1: begin
+            if(tx_done) begin
+                load_low = 1;
+                nxt_state = LOAD2;
             end
+        end
 
-            GAP: begin
-                sel_high = 1'b0;
-                if (gap_done) begin
-                    trmt = 1'b1;
-                    next_state = WAIT_LOW_DONE;
-                end
+        LOAD2: begin
+            trmt = 1;
+            nxt_state = SEND2;
+        end
+
+        SEND2: begin
+            if(tx_done) begin
+                set_cmd_sent = 1;
+                nxt_state = IDLE;
             end
-
-            WAIT_LOW_DONE: begin
-                sel_high = 1'b0;
-                if (tx_done) begin
-                    set_cmd_snt = 1'b1;
-                    next_state = IDLE;
-                end
-            end
-
-            default: next_state = IDLE;
-        endcase
-    end
+        end
+    endcase
+end
 
 endmodule
