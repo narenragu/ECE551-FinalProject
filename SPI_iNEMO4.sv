@@ -1,4 +1,5 @@
 // PROVIDED
+`timescale 1ns/1ps
 module SPI_iNEMO4(SS_n,SCLK,MISO,MOSI,INT,YAW);
   /////////////////////////////////////////////////////////
   // Model of a ST iNEMO 6-axis inertial device         //

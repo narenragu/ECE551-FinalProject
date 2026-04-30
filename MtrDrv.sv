@@ -17,6 +17,9 @@ module MtrDrv(
     logic [11:0] lft_duty_comb, rght_duty_comb;
     logic [11:0] lft_duty, rght_duty;
 
+<<<<<<< HEAD
+    DutyScaleROM iDSROM(.clk(clk), .batt_level(vbatt[9:4]), .scale(scale));
+=======
     DutyScaleROM iDSROM(
         .clk(clk),
         .batt_level(vbatt[9:4]),
@@ -50,6 +53,7 @@ module MtrDrv(
             rght_prod_q <= rght_prod;
         end
     end
+>>>>>>> a533a0e7516e4490893e6d328626292a22ed4de1
 
     // Saturate scaled values
     assign lft_scaled = (lft_prod_q[23:22] == 2'b01) ? 12'sh7FF :
