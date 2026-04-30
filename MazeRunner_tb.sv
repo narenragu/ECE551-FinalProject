@@ -146,7 +146,6 @@ module MazeRunner_tb();
   // south 12'h7FF
   // east  12'hC00
 
-
   // send some commands to the MazeRunner over bluetooth and observe responses
   initial begin
     // initialize signals
@@ -164,6 +163,7 @@ module MazeRunner_tb();
     repeat(5) @(negedge clk);
 
     repeat(200_000) @(negedge clk);
+
 
     // send cmd to calibrate
     $display("CMD: Calibrate");
@@ -214,18 +214,14 @@ module MazeRunner_tb();
     // expected left open, right and forward not open
     // should be above magnet
 
-    /*
+    */
 
-    // send cmd to move
+    // send cmd to solve
     $display("CMD: solve");
     send_command(16'h6001); // 3'b011 (solve) + cmd[0] = 1 (left affinity)
     @(posedge cmd_sent);
     monitor_maze_solve();
     wait_for_solve();
-
-    // expected to stop at left opening
-    // expected left open, right and forward not open
-    // should be above magnet
 
     */
 
