@@ -169,8 +169,6 @@ module MazeRunner_tb();
     $display("CMD: Calibrate");
     send_command_wait_ack(16'h0000);
 
-    /*
-
     // send cmd to set heading to north
     $display("CMD: Set heading north");
     send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
@@ -216,7 +214,7 @@ module MazeRunner_tb();
     // expected left open, right and forward not open
     // should be above magnet
 
-    */
+    /*
 
     // send cmd to move
     $display("CMD: solve");
@@ -228,6 +226,8 @@ module MazeRunner_tb();
     // expected to stop at left opening
     // expected left open, right and forward not open
     // should be above magnet
+
+    */
 
     repeat(5) @(negedge clk);
 
