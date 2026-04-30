@@ -1,0 +1,85 @@
+# MazeRunner.dc
+
+set target_library "/cae/apps/data/saed32_edk-current/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db"
+set link_library "* $target_library"
+
+remove_design -all
+
+analyze -format sverilog {
+    ./reset_synch.sv
+    ./UART_rx.sv
+    ./UART_tx.sv
+    ./UART.sv
+    ./UART_wrapper.sv
+    ./SPI_main.sv
+    ./SPI_ADC128S.sv
+    ./A2D_intf.sv
+    ./sensor_intf.sv
+    ./inertial_integrator.sv
+    ./inert_intf.sv
+    ./IR_Math.sv
+    ./I_term.sv
+    ./D_term.sv
+    ./PID.sv
+    ./PWM12.sv
+    ./PWM8.sv
+    ./DutyScaleROM.sv
+    ./MtrDrv.sv
+    ./navigate.sv
+    ./piezo_drv.sv
+    ./cmd_proc.sv
+    ./maze_solve.sv
+    ./MazeRunner.sv
+}
+
+elaborate MazeRunner
+current_design MazeRunner
+link
+check_design
+
+create_clock -name clk -period 2.75 -waveform {0 1.375} [get_ports clk]
+set_dont_touch_network [get_ports clk]
+
+set_clock_uncertainty 0.125 [get_clocks clk]
+
+# Inputs except clk and RST_n
+set prim_inputs [remove_from_collection [all_inputs] [get_ports {clk RST_n}]]
+
+set_input_delay 0.6 -clock [get_clocks clk] $prim_inputs
+
+set_driving_cell -lib_cell NAND2X2_LVT $prim_inputs
+
+set_output_delay 0.5 -clock [get_clocks clk] [all_outputs]
+
+# output load
+set_load 0.10 [all_outputs]
+
+set_max_transition 0.125 [current_design]
+
+set_wire_load_model -name 16000
+
+set_fix_multiple_port_nets -all -buffer_constants
+
+set_max_area 0
+
+check_timing
+
+compile -map_effort high -area_effort high
+
+ungroup -all -flatten
+
+compile -incremental -map_effort high
+
+compile -incremental -map_effort high
+
+# Reports
+report_timing -delay min > min_delay.rpt
+report_timing -delay max > max_delay.rpt
+report_timing -delay max -max_paths 10 > max_delay_10paths.rpt
+report_constraint -all_violators > constraints.rpt
+report_qor > qor.rpt
+report_area > MazeRunner_area.txt
+report_power > MazeRunner_power.txt
+
+# Gate-level netlist
+write -format verilog -output MazeRunner.vg
