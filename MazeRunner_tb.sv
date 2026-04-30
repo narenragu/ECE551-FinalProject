@@ -178,7 +178,6 @@ module MazeRunner_tb();
 
     pulse_marker;
 
-
     /*
     // send cmd to solve
     $display("CMD: Solve maze: left affinity");
