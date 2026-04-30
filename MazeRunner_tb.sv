@@ -21,6 +21,7 @@ module MazeRunner_tb();
   wire piezo;
 
   ///// Internal registers for testing purposes??? /////////
+  logic marker;
   
   //////////////////////
   // Instantiate DUT //
@@ -58,7 +59,7 @@ module MazeRunner_tb();
             $display("ACK received: 0x%h", resp);
         end
         begin
-            repeat(1_000_000) @(posedge clk);
+            repeat(20_000_000) @(posedge clk);
             $fatal(1, "TIMEOUT waiting for ACK");
         end
     join_any
@@ -104,53 +105,89 @@ module MazeRunner_tb();
     disable fork;
   endtask
 
+  task pulse_marker;
+    marker = 1;
+    @(negedge clk);
+    marker = 0;
+  endtask
+
+  // north 12'h000
+  // west  12'h3FF
+  // south 12'h7FF
+  // east  12'hC00
+
 
   // send some commands to the MazeRunner over bluetooth and observe responses
   initial begin
     // initialize signals
     clk = 0;
-    batt = 12'hD80; // nominal battery voltage
+    batt = 12'hFFF; // nominal battery voltage
     send_cmd = 0;
     cmd = 0;
+    marker = 0;
 
     RST_n = 0; // reset the system
     repeat(5) @(negedge clk);
     RST_n = 1; 
     repeat(5) @(negedge clk);
 
+    repeat(200_000) @(negedge clk);
+
     // send cmd to calibrate
     $display("CMD: Calibrate");
     send_command_wait_ack(16'h0000);
 
-    /*
+    pulse_marker;
 
     // send cmd to set heading to north
     $display("CMD: Set heading north");
     send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
 
-    // send cmd to move, stop at left opening
+    // send cmd to move
     $display("CMD: Move forward");
     send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+
+    // expected to not move since front is blocked
+    // expected left right and forward not open
+
+    pulse_marker;
     
-    // send cmd to set heading to west
-    $display("CMD: Set heading west");
-    send_command_wait_ack(16'h23FF); // 3'b001 (heading) + 12'h3FF (west)
+    // send cmd to set heading to south
+    $display("CMD: Set heading south");
+    send_command_wait_ack(16'h27FF); // 3'b001 (heading) + 12'h7FF (south)
 
-    // send cmd to move, stop at left opening
+    // send cmd to move
     $display("CMD: Move forward");
     send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
 
-    */
+    // expected to move all the way down since no left opening in path
+    // expected left right and forward not open
 
-    repeat(200_000) @(negedge clk);
+    pulse_marker;
 
-    // send cmd to calibrate
+    // send cmd to set heading to north
+    $display("CMD: Set heading north");
+    send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
+
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+
+    // expected to stop at left opening
+    // expected left open, right and forward not open
+
+    pulse_marker;
+
+
+    /*
+    // send cmd to solve
     $display("CMD: Solve maze: left affinity");
     send_command(16'h6001); // 3'b011 (solve) + cmd[0] = 1 (left affinity)
     @(posedge cmd_sent)
     wait_for_solve();
 
     $display("Maze solved!");
+    */
 
     repeat(5) @(negedge clk);
 

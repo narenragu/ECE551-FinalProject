@@ -3,9 +3,9 @@ module SPI_main(
     input  logic        rst_n,
 
     input  logic        wrt,
-    input  logic [15:0] wrt_data,
+    input  logic [15:0] cmd,
     output logic        done,
-    output logic [15:0] rd_data,
+    output logic [15:0] rspns,
 
     output logic        SS_n,
     output logic        SCLK,
@@ -34,7 +34,7 @@ module SPI_main(
 
     assign SCLK = SCLK_div[4];
     assign MOSI = shft_reg[15];
-    assign rd_data = shft_reg;
+    assign rspns = shft_reg;
 
     // sample before next SCLK rising edge
     assign smpl = (state == TRANSFER) && (SCLK_div == 5'b01111);
@@ -110,7 +110,7 @@ module SPI_main(
         if (!rst_n)
             shft_reg <= 16'h0000;
         else if (init)
-            shft_reg <= wrt_data;
+            shft_reg <= cmd;
         else if (shft)
             shft_reg <= {shft_reg[14:0], MISO_smpl};
     end

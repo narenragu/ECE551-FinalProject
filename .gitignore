@@ -3,3 +3,8 @@ work/
 .mpf
 .mti
 .wlf
+final.mpf
+core
+FinalProject.cr.mti
+FinalProject.mpf
+vsim.wlf

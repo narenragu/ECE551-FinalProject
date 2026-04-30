@@ -149,7 +149,7 @@ module RunnerPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
 	
 
   initial begin
-    	alpha_lft = 13'h0000;
+	alpha_lft = 13'h0000;
 	alpha_rght = 13'h0000;
 	omega_lft = 16'h0000;
 	omega_rght = 16'h0000;
