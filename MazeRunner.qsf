@@ -2,47 +2,34 @@
 # Build by Terasic System Builder
 #============================================================
 
-set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
 set_global_assignment -name TOP_LEVEL_ENTITY "MazeRunner"
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 12.0
-set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:26:50 MAY 12,2023"
-set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
-set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
 set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
 
 #============================================================
 # CLOCK
 #============================================================
-set_location_assignment PIN_R8 -to clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
 
 #============================================================
 # LED
 #============================================================
-set_location_assignment PIN_A15 -to LED[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
-set_location_assignment PIN_A13 -to LED[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
-set_location_assignment PIN_B13 -to LED[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
-set_location_assignment PIN_A11 -to LED[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
-set_location_assignment PIN_D1 -to LED[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
-set_location_assignment PIN_F3 -to LED[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
-set_location_assignment PIN_B1 -to LED[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
-set_location_assignment PIN_L3 -to LED[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
 
 #============================================================
 # KEY
 #============================================================
-set_location_assignment PIN_J15 -to RST_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RST_n
 #set_location_assignment PIN_E1 -to KEY[1]
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[1]
@@ -50,49 +37,31 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RST_n
 #============================================================
 # ADC
 #============================================================
-set_location_assignment PIN_A10 -to A2D_SS_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A2D_SS_n
-set_location_assignment PIN_B10 -to A2D_MOSI
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A2D_MOSI
-set_location_assignment PIN_B14 -to A2D_SCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A2D_SCLK
-set_location_assignment PIN_A9 -to A2D_MISO
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to A2D_MISO
 
 #============================================================
 # 2x13 GPIO Header
 #============================================================
-set_location_assignment PIN_A14 -to INRT_MOSI
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to INRT_MOSI
-set_location_assignment PIN_B16 -to INRT_SCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to INRT_SCLK
-set_location_assignment PIN_C14 -to INRT_SS_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to INRT_SS_n
-set_location_assignment PIN_C16 -to piezo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to piezo
-set_location_assignment PIN_C15 -to piezo_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to piezo_n
 #set_location_assignment PIN_D16 -to GPIO_2[5]
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2[5]
-set_location_assignment PIN_D15 -to lftPWM1
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lftPWM1
-set_location_assignment PIN_D14 -to lftPWM2
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to lftPWM2
-set_location_assignment PIN_F15 -to rghtPWM1
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rghtPWM1
-set_location_assignment PIN_F16 -to rghtPWM2
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rghtPWM2
-set_location_assignment PIN_F14 -to hall_n
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to hall_n
-set_location_assignment PIN_G16 -to TX
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to TX
 #set_location_assignment PIN_G15 -to GPIO_2[12]
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_2[12]
-set_location_assignment PIN_E15 -to INRT_MISO
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to INRT_MISO
-set_location_assignment PIN_E16 -to INRT_INT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to INRT_INT
-set_location_assignment PIN_M16 -to RX
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RX
 
 #============================================================
@@ -110,9 +79,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RX
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L[2]
 #set_location_assignment PIN_A3 -to IR_lft_en
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IR_lft_en
-set_location_assignment PIN_B11 -to IR_lft_en
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IR_lft_en
-set_location_assignment PIN_A12 -to IR_cntr_en
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IR_cntr_en
 
 #============================================================
@@ -124,7 +91,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IR_cntr_en
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to R[0]
 #set_location_assignment PIN_R9 -to R_IN[1]
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to R_IN[1]
-set_location_assignment PIN_T15 -to IR_rght_en
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to IR_rght_en
 #set_location_assignment PIN_T14 -to R[2]
 #set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to R[2]

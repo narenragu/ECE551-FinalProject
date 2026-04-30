@@ -1,0 +1,44 @@
+read_file -format sverilog { MazeRunner.sv UART.sv UART_wrapper.sv UART_tx.sv UART_rx.sv inert_intf.sv cmd_proc.sv IR_Math.sv sensor_intf.sv piezo_drv.sv PID.sv navigate.sv maze_solve.sv MtrDrv.sv reset_synch.sv SPI_main.sv PWM12.sv PWM8.sv }
+set current_design MazeRunner
+link
+
+# Define a 363MHz clock (period = 2.75ns)
+create_clock -name "clk" -period 2.75 -waveform {0 1.375} {clk}
+set_clock_uncertainty 0.125 clk
+set_dont_touch_network [find port clk]
+
+# setup pointer that contains all inputs except clock
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+
+# Set input delay of 0.6ns on all inputs except clock
+set_input_delay -clock clk 0.6 $prim_inputs
+
+# Set drive strength for all inputs except clock and rst_n
+set_driving_cell -lib_cell NAND2X2_LVT -library saed32rvt_tt0p85v25c [remove_from_collection [all_inputs] [get_ports {clk rst_n}]]
+
+# Set output delay of 0.5ns on all outputs
+set_output_delay 0.5 -clock clk [all_outputs]
+
+# Set load of 0.10pf on all outputs
+set_load 0.10 [all_outputs]
+
+# Set max transition time of 0.125ns on all nodes
+set_max_transition 0.125 [current_design]
+
+# Set wire load model for 32nm, block size 16000 sq microns
+set_wire_load_model -name 16000 -library saed32rvt_tt0p85v25c
+
+# Compile, flatten, and re-compile
+compile -map_effort medium -area_effort high
+
+ungroup -all -flatten
+
+compile -map_effort medium -area_effort high
+
+# Reports
+report_timing -delay min > min_delay.rpt
+report_timing -delay max > max_delay.rpt
+report_area > MazeRunner_area.txt
+
+# Write out gate-level netlist
+write -format verilog MazeRunner -output MazeRunner.vg

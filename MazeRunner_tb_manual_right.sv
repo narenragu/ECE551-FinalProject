@@ -1,8 +1,8 @@
 `timescale 1ns/1ps
 
-module MazeRunner_maze_solve_tb();
+module MazeRunner_tb();
 
-  localparam GATE_LEVEL = 1;
+  localparam GATE_LEVEL = 0;
   
   reg clk,RST_n;
   reg send_cmd;					// assert to send command to MazeRunner_tb
@@ -123,33 +123,24 @@ module MazeRunner_maze_solve_tb();
     end
   endtask
 
-task automatic monitor_maze_solve();
-    if (!GATE_LEVEL) begin
-        fork
-            forever @(posedge clk) begin
-                if (iDUT.iSLV.strt_hdng) begin
-                    $display("");
-                    case (iDUT.iSLV.dsrd_hdng)
-                        12'h000: $display("MAZE_SOLVE: strt_hdng > NORTH (0x000) at %0t", $time);
-                        12'h3FF: $display("MAZE_SOLVE: strt_hdng > WEST  (0x3FF) at %0t", $time);
-                        12'h7FF: $display("MAZE_SOLVE: strt_hdng > SOUTH (0x7FF) at %0t", $time);
-                        12'hC00: $display("MAZE_SOLVE: strt_hdng > EAST  (0xC00) at %0t", $time);
-                        default: $display("MAZE_SOLVE: strt_hdng > 0x%h at %0t", iDUT.iSLV.dsrd_hdng, $time);
-                    endcase
-                end
-                if (iDUT.iSLV.strt_mv) begin
-                    $display("MAZE_SOLVE: strt_mv (stp_lft=%b stp_rght=%b) at %0t",
-                             iDUT.iSLV.stp_lft, iDUT.iSLV.stp_rght, $time);
-                    $display("POSITION:   xx=0x%h yy=0x%h heading=0x%h",
-                             iPHYS.xx, iPHYS.yy, iPHYS.heading_robot[19:8]);
-                    $display("");
-                end
+  task automatic wait_for_sol_cmplt();
+    fork
+        begin
+            if (!GATE_LEVEL) begin
+                if (!iDUT.sol_cmplt)
+                    @(posedge iDUT.sol_cmplt);
+            end else begin
+                @(negedge hall_n);
             end
-        join_none
-    end else begin
-        $display("INFO: monitor_maze_solve disabled in gate level mode");
-    end
-endtask
+            $display("PASS: sol_cmplt (magnet detected)");
+        end
+        begin
+            repeat(1_000_000) @(posedge clk);
+            $fatal(1, "ERROR: timeout waiting for sol_cmplt");
+        end
+    join_any
+    disable fork;
+  endtask
 
   //////////////////////
   //      Test       //
@@ -163,12 +154,12 @@ endtask
   // send some commands to the MazeRunner over bluetooth (RemoteComm) and observe responses
   initial begin
     $display("================================");
-    $display("TEST: MazeRunner automatic solve test");
+    $display("TEST: MazeRunner right affinity manual navigation test");
     $display("================================");
 
     // initialize signals
     clk = 0;
-    batt = 12'hFFF; // nominal battery voltage
+    batt = 12'hFFF;
     send_cmd = 0;
     cmd = 0;
 
@@ -179,27 +170,58 @@ endtask
 
     repeat(200_000) @(negedge clk);
 
-
     // send cmd to calibrate
     $display("CMD: Calibrate");
     send_command_wait_ack(16'h0000);
 
-    // send cmd to solve
-    $display("CMD: solve");
-    send_command(16'h6001); // 3'b011 (solve) + cmd[0] = 1 (left affinity)
-    @(posedge cmd_sent);
-    monitor_maze_solve();
-    wait_for_solve();
+    // send cmd to set heading to north
+    $display("CMD: Set heading north");
+    send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
 
-    if (!GATE_LEVEL && !iDUT.sol_cmplt)
-      $fatal(1, "ERROR: sol_cmplt not asserted after maze solved");
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(16'h4000); // 3'b010 (move) + cmd[1] = 0 (stop right)
 
-    check_position_cell(4'h1, 4'h2); // expected final cell is (1,2)
+    check_position_cell(4'h3, 4'h3);
+    $display("");
+    
+    // send cmd to set heading to south
+    $display("CMD: Set heading south");
+    send_command_wait_ack(16'h27FF); // 3'b001 (heading) + 12'h7FF (south)
+
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(16'h4000); // 3'b010 (move) + cmd[1] = 0 (stop right)
+
+    // expected to move down 1 and stop at right opening
+    // expected right and forward open, left not open
+
+    check_position_cell(4'h3, 4'h2);
+    $display("");
+
+    // send cmd to set heading to west
+    $display("CMD: Set heading west");
+    send_command_wait_ack(16'h23FF); // 3'b001 (heading) + 12'h3FF (west)
+
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(16'h4000); // 3'b010 (move) + cmd[1] = 0 (stop right)
+
+    // expected to stop at left opening
+    // expected left open, right and forward not open
+    // should be above magnet
+
+    check_position_cell(4'h1, 4'h2);
+    $display("");
+
+    // check for completed solution
+    if(!GATE_LEVEL)
+      wait_for_sol_cmplt();
 
     repeat(5) @(negedge clk);
 
     $display("");
-    $display("All tests passed!");
+    $display("Right affinity manual solve passed!");
 
     $stop();
   end
@@ -208,6 +230,3 @@ endtask
     #5 clk = ~clk;
 	
 endmodule
-
-
-    

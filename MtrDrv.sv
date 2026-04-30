@@ -10,7 +10,7 @@ module MtrDrv(
     logic signed [11:0] lft_scaled, rght_scaled;
     logic [11:0] lft_duty, rght_duty;
 
-    DutyScaleROM iDSROM(clk, vbatt[9:4], scale);
+    DutyScaleROM iDSROM(.clk(clk), .batt_level(vbatt[9:4]), .scale(scale));
 
     assign lft_prod  = lft_spd  * $signed({1'b0, scale});
     assign rght_prod = rght_spd * $signed({1'b0, scale});

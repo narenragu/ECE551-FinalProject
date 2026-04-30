@@ -26,19 +26,19 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	inert_intf_tb
 
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_maze_solve_tb.sv {1 {vlog -work work -vopt -sv -cover sbcet3 -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_maze_solve_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MazeRunner_maze_solve_tb
+
+Top level modules:
+	MazeRunner_maze_solve_tb
+
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/I_term.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/I_term.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 -- Compiling module I_term
 
 Top level modules:
 	I_term
-
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_maze_solve_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_maze_solve_tb.sv
-QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MazeRunner_maze_solve_tb
-
-Top level modules:
-	MazeRunner_maze_solve_tb
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/navigate_tb_starter.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/navigate_tb_starter.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -68,12 +68,15 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	maze_solve_tb
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb_manual_left.sv {1 {vlog -work work -vopt -sv -cover sbcet3 -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb_manual_left.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module DutyScaleROM
+-- Compiling module MazeRunner_tb
 
 Top level modules:
-	DutyScaleROM
+	MazeRunner_tb
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/tb_tasks.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/tb_tasks.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/IR_Math.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -82,6 +85,20 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 
 Top level modules:
 	IR_math
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/DutyScaleROM.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module DutyScaleROM
+
+Top level modules:
+	DutyScaleROM
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/PID.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/PID.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module PID
+
+Top level modules:
+	PID
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv {2 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/RunnerPhysics.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -92,6 +109,13 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	RunnerPhysics
 
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb_manual_right.sv {1 {vlog -work work -vopt -sv -cover sbcet3 -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb_manual_right.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MazeRunner_tb
+
+Top level modules:
+	MazeRunner_tb
+
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/inertial_integrator.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 -- Compiling module inertial_integrator
@@ -99,12 +123,12 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	inertial_integrator
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MtrDrv
+-- Compiling module MazeRunner
 
 Top level modules:
-	MtrDrv
+	MazeRunner
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/cmd_proc.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -141,12 +165,12 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 Top level modules:
 	A2D_intf
 
-} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner.sv
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MtrDrv.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
--- Compiling module MazeRunner
+-- Compiling module MtrDrv
 
 Top level modules:
-	MazeRunner
+	MtrDrv
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/SPI_main.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
@@ -183,6 +207,13 @@ QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
 
 Top level modules:
 	D_term
+
+} {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/MazeRunner_tb.sv
+QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
+-- Compiling module MazeRunner_tb
+
+Top level modules:
+	MazeRunner_tb
 
 } {} {}} /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/n/naraghuraman/ECE551/FinalProject/UART_wrapper.sv
 QuestaSim vlog 2024.3_2 Compiler 2024.11 Nov 25 2024
