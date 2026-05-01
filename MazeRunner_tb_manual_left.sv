@@ -1,8 +1,10 @@
 `timescale 1ns/1ps
 
-module MazeRunner_tb();
+import MazeRunner_helper::*;
 
-  localparam GATE_LEVEL = 0;
+module MazeRunner_tb_manual_left();
+
+  localparam GATE_LEVEL = 1;
   
   reg clk,RST_n;
   reg send_cmd;					// assert to send command to MazeRunner_tb
@@ -54,97 +56,9 @@ module MazeRunner_tb();
 					 .A2D_MISO(A2D_MISO),.hall_n(hall_n),.batt(batt));
 
   //////////////////////
-  //  Helper tasks   //
-  ////////////////////
-  task automatic wait_for_ack();
-    fork
-        begin
-            @(posedge resp_rdy);
-            if (resp !== 8'hA5)
-                $fatal(1, "ERROR: expected 0xA5, got 0x%h", resp);
-            $display("PASS: ACK received: 0x%h", resp);
-        end
-        begin
-            repeat(20_000_000) @(posedge clk);
-            $fatal(1, "ERROR: timeout waiting for ACK");
-        end
-    join_any
-    disable fork;
-  endtask
-
-  task automatic send_command;
-    input [15:0] command;
-    begin
-        @(negedge clk);
-        cmd = command;
-        send_cmd = 1'b1;
-        @(negedge clk);
-        send_cmd = 1'b0;
-    end
-  endtask
-
-  task automatic send_command_wait_ack;
-    input [15:0] command;
-    begin
-        send_command(command);
-        @(posedge cmd_sent);
-        wait_for_ack();
-    end
-  endtask
-
-  task automatic wait_for_solve();
-    fork
-        begin
-            @(negedge hall_n);
-            $display("PASS: Magnet found! Maze solved at time %0t", $time);
-            // wait for ACK after sol_cmplt
-            @(posedge resp_rdy);
-            if (resp !== 8'hA5)
-                $fatal(1, "ERROR: expected 0xA5 after solve, got 0x%h", resp);
-            $display("PASS: ACK received: 0x%h", resp);
-        end
-        begin
-            repeat(20_000_000) @(posedge clk);
-            $fatal(1, "ERROR: maze not solved within 20M cycles");
-        end
-    join_any
-    disable fork;
-  endtask
-
-  task automatic check_position_cell(input [3:0] expected_x, input [3:0] expected_y);
-    if (iPHYS.xx[14:12] !== expected_x[2:0] || iPHYS.yy[14:12] !== expected_y[2:0]) begin
-        $fatal(1, "ERROR: expected cell (%0d, %0d), got (%0d, %0d) [xx=0x%h yy=0x%h]",
-               expected_x, expected_y,
-               iPHYS.xx[14:12], iPHYS.yy[14:12],
-               iPHYS.xx, iPHYS.yy);
-    end else begin
-        $display("PASS: Cell correct: (%0d, %0d) [xx=0x%h yy=0x%h]",
-                 expected_x, expected_y, iPHYS.xx, iPHYS.yy);
-    end
-  endtask
-
-  task automatic wait_for_sol_cmplt();
-    fork
-        begin
-            if (!GATE_LEVEL) begin
-                if (!iDUT.sol_cmplt)
-                    @(posedge iDUT.sol_cmplt);
-            end else begin
-                @(negedge hall_n);
-            end
-            $display("PASS: sol_cmplt (magnet detected)");
-        end
-        begin
-            repeat(1_000_000) @(posedge clk);
-            $fatal(1, "ERROR: timeout waiting for sol_cmplt");
-        end
-    join_any
-    disable fork;
-  endtask
-
-  //////////////////////
   //      Test       //
   ////////////////////
+  `include "tb_tasks.svh"
 
   // north 12'h000
   // west  12'h3FF
@@ -174,15 +88,16 @@ module MazeRunner_tb();
 
     // send cmd to calibrate
     $display("CMD: Calibrate");
-    send_command_wait_ack(16'h0000);
+    send_command_wait_ack(CMD_CALIBRATE);
 
     // send cmd to set heading to north
     $display("CMD: Set heading north");
-    send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
+    send_command_wait_ack(CMD_HDG_NORTH);
+    check_heading(HDG_NORTH);
 
     // send cmd to move
     $display("CMD: Move forward");
-    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+    send_command_wait_ack(CMD_MOVE_STOP_L);
 
     // expected to not move since front is blocked
     // expected left right and forward not open
@@ -192,11 +107,12 @@ module MazeRunner_tb();
     
     // send cmd to set heading to south
     $display("CMD: Set heading south");
-    send_command_wait_ack(16'h27FF); // 3'b001 (heading) + 12'h7FF (south)
+    send_command_wait_ack(CMD_HDG_SOUTH);
+    check_heading(HDG_SOUTH);
 
     // send cmd to move
     $display("CMD: Move forward");
-    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+    send_command_wait_ack(CMD_MOVE_STOP_L);
 
     // expected to move all the way down since no left opening in path
     // expected left right and forward not open
@@ -206,11 +122,12 @@ module MazeRunner_tb();
 
     // send cmd to set heading to north
     $display("CMD: Set heading north");
-    send_command_wait_ack(16'h2000); // 3'b001 (heading) + 12'h000 (north)
+    send_command_wait_ack(CMD_HDG_NORTH);
+    check_heading(HDG_NORTH);
 
     // send cmd to move
     $display("CMD: Move forward");
-    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+    send_command_wait_ack(CMD_MOVE_STOP_L);
 
     // expected to stop at left opening
     // expected left open, right and forward not open
@@ -220,11 +137,12 @@ module MazeRunner_tb();
 
     // send cmd to set heading to west
     $display("CMD: Set heading west");
-    send_command_wait_ack(16'h23FF); // 3'b001 (heading) + 12'h3FF (west)
+    send_command_wait_ack(CMD_HDG_WEST);
+    check_heading(HDG_WEST);
 
     // send cmd to move
     $display("CMD: Move forward");
-    send_command_wait_ack(16'h4002); // 3'b010 (move) + cmd[1] = 1 (stop left)
+    send_command_wait_ack(CMD_MOVE_STOP_L);
 
     // expected to stop at left opening
     // expected left open, right and forward not open
@@ -234,8 +152,6 @@ module MazeRunner_tb();
     $display("");
 
     // check for completed solution
-    if(!GATE_LEVEL)
-      wait_for_sol_cmplt();
 
     repeat(5) @(negedge clk);
 

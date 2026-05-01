@@ -1,5 +1,7 @@
 `timescale 1ns/1ps
 
+import MazeRunner_helper::*;
+
 module MazeRunner_tb_batt();
 
   reg clk, RST_n;
@@ -179,9 +181,9 @@ module MazeRunner_tb_batt();
     //         check motor duty symmetry
     //-------------------------------------------------------------
     $display("TEST 3: Motor duty at high battery");
-    send_command_wait_ack_silent(16'h0000); // calibrate
-    send_command_wait_ack_silent(16'h27FF); // heading south
-    send_command(16'h4002);                 // move forward
+    send_command_wait_ack_silent(CMD_CALIBRATE); // calibrate
+    send_command_wait_ack_silent(CMD_HDG_SOUTH); // heading south
+    send_command(CMD_MOVE_STOP_L);                 // move forward
     @(posedge cmd_sent);
     // sample duty mid-move
     repeat(50_000) @(posedge clk);
@@ -199,8 +201,8 @@ module MazeRunner_tb_batt();
         batt = 12'hD80; // nominal/lower battery
         wait_for_battery_to_settle();
         display_battery();
-        send_command_wait_ack_silent(16'h2000); // heading north
-        send_command(16'h4002);                 // move forward
+        send_command_wait_ack_silent(CMD_HDG_NORTH); // heading north
+        send_command(CMD_MOVE_STOP_L);                 // move forward
         @(posedge cmd_sent);
         repeat(50_000) @(posedge clk);
         $display("Low battery duty: lft=0x%h rght=0x%h", iDUT.iMTR.lft_duty, iDUT.iMTR.rght_duty);

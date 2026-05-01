@@ -27,3 +27,8 @@ wlf*
 db/
 incremental_db/
 c5_pin_model_dump.txt
+cerealkillers/
+cerealkillers.tar.gz
+final.cr.mti
+*.ucdb
+*.qws

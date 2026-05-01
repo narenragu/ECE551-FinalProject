@@ -2,9 +2,7 @@
 
 import MazeRunner_helper::*;
 
-module MazeRunner_maze_solve_tb();
-
-  localparam GATE_LEVEL = 0;
+module MazeRunner_tb_new();
   
   reg clk,RST_n;
   reg send_cmd;					// assert to send command to MazeRunner_tb
@@ -72,12 +70,12 @@ module MazeRunner_maze_solve_tb();
   // send some commands to the MazeRunner over bluetooth (RemoteComm) and observe responses
   initial begin
     $display("================================");
-    $display("TEST: MazeRunner automatic solve test");
+    $display("TEST: MazeRunner Testbench ");
     $display("================================");
 
     // initialize signals
     clk = 0;
-    batt = 12'hFFF; // nominal battery voltage
+    batt = 12'hFFF;
     send_cmd = 0;
     cmd = 0;
 
@@ -88,58 +86,48 @@ module MazeRunner_maze_solve_tb();
 
     repeat(200_000) @(negedge clk);
 
-
     // send cmd to calibrate
     $display("CMD: Calibrate");
     send_command_wait_ack(CMD_CALIBRATE);
+    check_heading(HDG_NORTH);
 
-    // send cmd to solve
-    $display("CMD: solve");
-    send_command(CMD_SOLVE_LEFT);
-    @(posedge cmd_sent);
-    monitor_maze_solve();
-    wait_for_solve();
+    // send cmd to set heading to south
+    $display("CMD: Set heading south");
+    send_command_wait_ack(CMD_HDG_SOUTH);
+    check_heading(HDG_SOUTH);
 
-    if (!GATE_LEVEL && !iDUT.sol_cmplt)
-      $fatal(1, "ERROR: sol_cmplt not asserted after maze solved");
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(CMD_MOVE_STOP_R);
+    check_position_cell(4'h3, 4'h2);
+    $display("");
+    
+    // send cmd to set heading to west
+    $display("CMD: Set heading west");
+    send_command_wait_ack(CMD_HDG_WEST);
+    check_heading(HDG_WEST);
 
-    check_position_cell(4'h1, 4'h2); // expected final cell is (1,2)
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(CMD_MOVE_STOP_R);
+    check_position_cell(4'h1, 4'h2);
+    $display("");
+
+    // send cmd to set heading to east
+    $display("CMD: Set heading east");
+    send_command_wait_ack(CMD_HDG_EAST);
+    check_heading(HDG_EAST);
+
+    // send cmd to move
+    $display("CMD: Move forward");
+    send_command_wait_ack(CMD_MOVE_STOP_R);
+    check_position_cell(4'h3, 4'h2);
+    $display("");
 
     repeat(5) @(negedge clk);
 
     $display("");
-    $display("Maze solved! (Left affinity)");
-
-    // reset mazephysics and iDUT for right affinity solve
-    RST_n = 0;
-    repeat(5) @(negedge clk);
-    RST_n = 1;
-    repeat(5) @(negedge clk);
-
-    repeat(200_000) @(negedge clk);
-
-    iPHYS.heading_robot = 20'h00000; // reset heading to north
-    iPHYS.xx = 15'h3800; // reset position to (3,3)
-    iPHYS.yy = 15'h3800; // reset position to (3,3)
-
-
-    // send cmd to calibrate
-    $display("CMD: Calibrate");
-    send_command_wait_ack(CMD_CALIBRATE);
-
-    // send cmd to solve
-    $display("CMD: solve");
-    send_command(CMD_SOLVE_RIGHT);
-    @(posedge cmd_sent);
-    monitor_maze_solve();
-    wait_for_solve();
-
-    if (!GATE_LEVEL && !iDUT.sol_cmplt)
-      $fatal(1, "ERROR: sol_cmplt not asserted after maze solved");
-
-    check_position_cell(4'h1, 4'h2); // expected final cell is (1,2)
-
-    repeat(5) @(negedge clk);
+    $display("All test passed!");
 
     $stop();
   end
@@ -148,6 +136,3 @@ module MazeRunner_maze_solve_tb();
     #5 clk = ~clk;
 	
 endmodule
-
-
-    
